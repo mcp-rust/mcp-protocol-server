@@ -1,0 +1,52 @@
+[package]
+name = "mcp-protocol-server"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+authors = ["MCP Rust Contributors"]
+description = "Lightweight server library for the Model Context Protocol (MCP)"
+license = "MIT"
+repository = "https://github.com/mcp-rust/mcp-protocol-server"
+keywords = ["mcp", "ai", "llm", "protocol", "server"]
+categories = ["api-bindings", "network-programming", "development-tools"]
+readme = "README.md"
+homepage = "https://modelcontextprotocol.io"
+documentation = "https://docs.rs/mcp-protocol-server"
+
+[dependencies]
+# Core protocol types
+mcp-protocol-types = { version = "0.1.0", path = "../mcp-protocol-types" }
+
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1.74"
+futures = "0.3"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+
+# Utilities
+uuid = { version = "1.6", features = ["v4"] }
+
+# Optional transport features
+tokio-process = { version = "0.2", optional = true }
+
+[dev-dependencies]
+tokio-test = "0.4"
+tempfile = "3.8"
+
+[features]
+default = ["stdio"]
+stdio = ["tokio-process"]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
