@@ -1,0 +1,17 @@
+# Local development documentation and artifacts
+my-docs/
+
+# Common Rust ignores
+/target/
+Cargo.lock
+*.pdb
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
