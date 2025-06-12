@@ -2,7 +2,7 @@
 
 [![Crates.io](https://img.shields.io/crates/v/mcp-protocol-server.svg)](https://crates.io/crates/mcp-protocol-server)
 [![Documentation](https://docs.rs/mcp-protocol-server/badge.svg)](https://docs.rs/mcp-protocol-server)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 **Lightweight server library for the Model Context Protocol (MCP)**
 
